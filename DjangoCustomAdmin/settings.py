@@ -61,7 +61,7 @@ ROOT_URLCONF = 'DjangoCustomAdmin.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates', 'templates/admin'],
+        'DIRS': ['templates', 'templates/admin', 'templates/admin/registration'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
