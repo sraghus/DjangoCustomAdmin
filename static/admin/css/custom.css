@@ -6418,4 +6418,9 @@ ul.notifications {
 .copyright-info {
     padding: 8px 0;
 }
+.errornote { font-size: 14px; font-weight: 700; display: block; padding: 10px 12px; margin: 0 0 10px 0; color: #E74C3C; background-position: 5px 12px;}
+ul.errorlist { margin: 0 0 4px 13px; padding: 0; color: #E74C3C; text-align: left;}
+ul.errorlist li { font-size: 14px; display: block; margin-bottom: 4px; font-weight: 700;}
+ul.errorlist li:first-child { margin-top: 0;}
+ul.errorlist li a { color: inherit; text-decoration: underline;}
 body{font-family: segoe ui, Arial, sans-serif}
