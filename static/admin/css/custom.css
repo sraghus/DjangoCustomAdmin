@@ -204,6 +204,7 @@ body.nav-md .container.body .col-md-3.left_col {
 
 body .container.body .right_col {
     background: #F7F7F7;
+    min-height: 395px;
 }
 
 body.nav-md .container.body .right_col {

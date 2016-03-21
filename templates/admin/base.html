@@ -10,7 +10,7 @@
 {% block blockbots %}<meta name="robots" content="NONE,NOARCHIVE" />{% endblock %}
 
 <link href="{% static 'admin/css/bootstrap.min.css' %}" rel="stylesheet">
-<link href="{% static 'fonts/css/font-awesome.min.css' %}" rel="stylesheet">
+<link href="{% static 'admin/fonts/css/font-awesome.min.css' %}" rel="stylesheet">
 <link href="{% static 'admin/css/animate.min.css' %}" rel="stylesheet">
 <link href="{% block stylesheet %}{% static "admin/css/custom.css" %}{% endblock %}" rel="stylesheet" />
 <link href="{% static 'admin/css/icheck/flat/green.css' %}" rel="stylesheet" />
@@ -25,7 +25,7 @@
 
 {% load i18n %}
 
-<body class="{% if is_popup %}popup {% endif %}{% block bodyclass %}{% endblock %}"
+<body class="{% if is_popup %}popup {% endif %}{% block bodyclass %}nav-md  pace-done{% endblock %}"
   data-admin-utc-offset="{% now "Z" %}">
 
 <!-- Container -->
@@ -34,79 +34,93 @@
         {% if not is_popup %}
             {% block left-nav %}
                 <div class="col-md-3 left_col">
+                    <div class="sidebar-footer hidden-small">
+                        <a data-toggle="tooltip" data-placement="top" title="" data-original-title="Settings">
+                            <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="" data-original-title="FullScreen">
+                            <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="" data-original-title="Lock">
+                            <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="" data-original-title="Logout">
+                            <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                        </a>
+                    </div>
                 </div>
             {% endblock left-nav %}
-        {% block header %}
-            <!-- Header -->
-            <div class="top_nav">
-                <div class="nav_menu">
-                    <nav role="navigation">
-                        <div class="nav toggle">
-                            <a id="menu_toggle"><i class="fa fa-bars"></i></a>
-                        </div>
-                        {% block branding %}{% endblock %}
-                        {% block usertools %}
-                        {% if has_permission %}
-                        <ul class="nav navbar-nav navbar-right">
-                            <li>
-                                {% block welcome-msg %}
-                                    {% trans 'Welcome,' %}
-                                    <strong>{% firstof user.get_short_name user.get_username %}</strong>.
-                                {% endblock %}
-                                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><strong>{% firstof user.get_short_name user.get_username %}</strong> <span class=" fa fa-angle-down"></span>
-                                </a>
-                                <ul class="dropdown-menu dropdown-usermenu animated fadeInDown pull-right">
-                                    <li>
-                                        <a href="javascript:;">  Profile</a>
-                                    </li>
-                                    <!-- <li>
-                                        <a href="javascript:;">
-                                            <span class="badge bg-red pull-right">50%</span>
-                                            <span>Settings</span>
-                                        </a>
-                                    </li> -->
-                                    <li>
-                                        <a href="{% url 'admin:logout' %}">{% trans 'Log out' %}<i class="fa fa-sign-out pull-right"></i></a>
-                                    </li>
-                                    <li>
-                                        {% block userlinks %}
-                                            {% if site_url %}
-                                                <a href="{{ site_url }}">{% trans 'View site' %}</a>
-                                            {% endif %}
-                                            {% if user.is_active and user.is_staff %}
-                                                {% url 'django-admindocs-docroot' as docsroot %}
-                                                {% if docsroot %}
-                                                    <a href="{{ docsroot }}">{% trans 'Documentation' %}</a>
+            {% block header %}
+                <!-- Top navigation -->
+                <div class="top_nav">
+                    <div class="nav_menu">
+                        <nav role="navigation">
+                            <div class="nav toggle">
+                                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                            </div>
+                            {% block branding %}{% endblock %}
+                            {% block usertools %}
+                            {% if has_permission %}
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>
+                                    {% block welcome-msg %}
+                                    <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{% trans 'Welcome, ' %}<strong>{% firstof user.get_short_name user.get_username %}</strong> <span class=" fa fa-angle-down"></span>
+                                    </a>
+                                    {% endblock %}
+                                    <ul class="dropdown-menu dropdown-usermenu animated fadeInDown pull-right">
+                                        <li>
+                                            <a href="javascript:;">  Profile</a>
+                                        </li>
+                                        <!-- <li>
+                                            <a href="javascript:;">
+                                                <span class="badge bg-red pull-right">50%</span>
+                                                <span>Settings</span>
+                                            </a>
+                                        </li> -->
+                                        <li>
+                                            <a href="{% url 'admin:logout' %}">{% trans 'Log out' %}<i class="fa fa-sign-out pull-right"></i></a>
+                                        </li>
+                                        <li>
+                                            {% block userlinks %}
+                                                {% if site_url %}
+                                                    <a href="{{ site_url }}">{% trans 'View site' %}</a>
                                                 {% endif %}
-                                            {% endif %}
-                                            {% if user.has_usable_password %}
-                                            <a href="{% url 'admin:password_change' %}">{% trans 'Change password' %}</a>
-                                            {% endif %}
-                                            <a href="{% url 'admin:logout' %}">{% trans 'Log out' %}</a>
-                                        {% endblock %} 
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>{% if site_url %}
-                                <a href="{{ site_url }}">{% trans 'View site' %}</a>{% endif %}
-                            </li>
-                        </ul>
-                    </nav>
+                                                {% if user.is_active and user.is_staff %}
+                                                    {% url 'django-admindocs-docroot' as docsroot %}
+                                                    {% if docsroot %}
+                                                        <a href="{{ docsroot }}">{% trans 'Documentation' %}</a>
+                                                    {% endif %}
+                                                {% endif %}
+                                                {% if user.has_usable_password %}
+                                                <a href="{% url 'admin:password_change' %}">{% trans 'Change password' %}</a>
+                                                {% endif %}
+                                                <a href="{% url 'admin:logout' %}">{% trans 'Log out' %}</a>
+                                            {% endblock %} 
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    {% if site_url %}
+                                    <a href="{{ site_url }}">{% trans 'View site' %}</a>
+                                    {% endif %}
+                                </li>
+                            </ul>
+                            {% endif %}
+                            {% endblock %}
+                            {% block nav-global %}{% endblock %}
+                        </nav>
+                    </div>
                 </div>
-            </div>
-            {% endif %}
-            {% endblock %}
-            {% block nav-global %}{% endblock %}
-        {% endblock header %}
-    </div>
-        <!-- END Header -->
+                {% endblock header %}
+            <!-- END Top navigation -->
 
-        {% block breadcrumbs %}
-        <div class="breadcrumbs">
-        <a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>
-        {% if title %} &rsaquo; {{ title }}{% endif %}
-        </div>
-        {% endblock %}
+            {% block breadcrumbs %}
+            <div class="breadcrumbs">
+                <a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>
+                {% if title %} &rsaquo; {{ title }}{% endif %}
+            </div>
+            {% endblock %}
+            
         {% endif %}
 
         {% block messages %}
@@ -118,7 +132,7 @@
         {% endblock messages %}
 
         <!-- Content -->
-        <div class="right-col" class="{% block coltype %}colM{% endblock %}">
+        <div class="right_col" class="{% block coltype %}colM{% endblock %}">
             {% block pretitle %}{% endblock %}
             {% block content_title %}{% if title %}<h1>{{ title }}</h1>{% endif %}{% endblock %}
             {% block content %}
@@ -127,10 +141,18 @@
             {% endblock %}
             {% block sidebar %}{% endblock %}
             <br class="clear" />
+            {% block footer %}
+                <div id="footer">
+                    <p class="pull-right">Bootstrap 3 template by <a>AGILIQ</a> |
+                        <span class="lead"> <i class="fa fa-paw"></i> Djago Admin</span>
+                    </p>
+                </div>
+                <div class="clearfix"></div>
+            {% endblock %}
         </div>
         <!-- END Content -->
 
-        {% block footer %}<div id="footer"></div>{% endblock %}
+        
     </div>
 </div>
 <!-- END Container -->
