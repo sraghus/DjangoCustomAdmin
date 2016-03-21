@@ -5741,7 +5741,7 @@ form:after {
     visibility: hidden;
 }
 
-.login_content {
+.login_content, .logout_content {
     margin: 0 auto;
     padding: 25px 0 0;
     position: relative;
@@ -5755,15 +5755,40 @@ form:after {
     line-height: 20px;
     margin: 10px 0 30px;
 }
+#logout{
+    padding-top: 45px;
+}
+.logout_content h1 {
+    font: normal 20px segoe ui, Arial, sans-serif;
+    /*letter-spacing: -0.05em;*/
+    line-height: 20px;
+    margin: -25px 0 30px;
+}
+section.logout_content:after{
+    content: "";
+    height: 1px;
+    position: absolute;
+    bottom: -30px;
+    width: 100%;
+    background: rgb(126,126,126);
+    background: -moz-linear-gradient(right,  rgba(255,255,255,1) 0%, rgba(155,155,155,1) 50%, rgba(255,255,255,1) 100%);
+    background: -webkit-linear-gradient(right,  rgba(255,255,255,1) 0%, rgba(155,155,155,1) 50%, rgba(255,255,255,1) 100%);
+    background: -o-linear-gradient(right,  rgba(255,255,255,1) 0%, rgba(155,155,155,1) 50%, rgba(255,255,255,1) 100%);
+    background: -ms-linear-gradient(right,  rgba(255,255,255,1) 0%, rgba(155,155,155,1) 50%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(right,  rgba(255,255,255,1) 0%, rgba(155,155,155,1) 50%, rgba(255,255,255,1) 100%);
+    left: 0;
+    visibility: visible !important;
+}
 .login_content h1:before,
-.login_content h1:after {
+.login_content h1:after, .logout_content h1:before, .logout_content h1:after {
     content: "";
     height: 1px;
     position: absolute;
     top: 10px;
     width: 27%;
 }
-.login_content h1:after {
+
+.login_content h1:after, .logout_content h1:after {
     background: rgb(126,126,126);
     background: -moz-linear-gradient(left,  rgba(126,126,126,1) 0%, rgba(255,255,255,1) 100%);
     background: -webkit-linear-gradient(left,  rgba(126,126,126,1) 0%,rgba(255,255,255,1) 100%);
@@ -5772,7 +5797,7 @@ form:after {
     background: linear-gradient(left,  rgba(126,126,126,1) 0%,rgba(255,255,255,1) 100%);
     right: 0;
 }
-.login_content h1:before {
+.login_content h1:before, .logout_content h1:before {
     background: rgb(126,126,126);
     background: -moz-linear-gradient(right,  rgba(126,126,126,1) 0%, rgba(255,255,255,1) 100%);
     background: -webkit-linear-gradient(right,  rgba(126,126,126,1) 0%,rgba(255,255,255,1) 100%);
@@ -5782,14 +5807,14 @@ form:after {
     left: 0;
 }
 .login_content h1:before,
-.login_content h1:after {
+.login_content h1:after, .logout_content h1:before, .logout_content h1:after {
     content: "";
     height: 1px;
     position: absolute;
     top: 10px;
     width: 20%;
 }
-.login_content h1:after {
+.login_content h1:after, .logout_content h1:after {
     background: rgb(126,126,126);
     background: -moz-linear-gradient(left,  rgba(126,126,126,1) 0%, rgba(255,255,255,1) 100%);
     background: -webkit-linear-gradient(left,  rgba(126,126,126,1) 0%,rgba(255,255,255,1) 100%);
@@ -5798,7 +5823,7 @@ form:after {
     background: linear-gradient(left,  rgba(126,126,126,1) 0%,rgba(255,255,255,1) 100%);
     right: 0;
 }
-.login_content h1:before {
+.login_content h1:before, .logout_content h1:before {
     background: rgb(126,126,126);
     background: -moz-linear-gradient(right,  rgba(126,126,126,1) 0%, rgba(255,255,255,1) 100%);
     background: -webkit-linear-gradient(right,  rgba(126,126,126,1) 0%,rgba(255,255,255,1) 100%);
