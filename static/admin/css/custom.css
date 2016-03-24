@@ -2181,10 +2181,11 @@ h4.graph_title {
 
 .tile-stats h3 {
     color: #BAB8B8;
+    margin-bottom: 10px;
 }
 
 .tile-stats p {
-    margin-top: 5px;
+    margin: 5px 5px 0px 5px;
     font-size: 12px;
 }
 
