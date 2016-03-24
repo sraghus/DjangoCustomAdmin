@@ -160,7 +160,7 @@
                         </a>
                     </div>
                     <!-- /menu footer buttons -->
-                </div>                    
+                </div>
                 </div>
             {% endblock left-nav %}
             {% block header %}
@@ -200,8 +200,8 @@
                                                 {% endif %}
                                                 {% if user.has_usable_password %}
                                                 <a href="{% url 'admin:password_change' %}">{% trans 'Change password' %}</a>
-                                                {% endif %}                                                
-                                            {% endblock %} 
+                                                {% endif %}
+                                            {% endblock %}
                                         </li>
                                     </ul>
                                 </li>
@@ -242,7 +242,7 @@
             {% endblock %}
             <div class="row">
                     {% block content_title %}{% if title %}<h1>{{ title }}</h1>{% endif %}{% endblock %}
-                <div class="right_col_content col-md-8">
+                <div class="right_col_content col-md-9">
                     {% block content %}
                         {% block object-tools %}{% endblock %}
                         {{ content }}
@@ -250,7 +250,7 @@
                     {% block sidebar %}{% endblock %}
                     <br class="clear" />
                 </div>
-                <div class="col-md-4">&nbsp;</div>
+                <div class="col-md-3">&nbsp;</div>
             </div>
 
             {% block footer %}
