@@ -203,7 +203,7 @@ body.nav-md .container.body .col-md-3.left_col {
 }
 
 body .container.body .right_col {
-    background: #F7F7F7;
+    background: #FDFDFD;
     min-height: 395px;
 }
 
@@ -884,7 +884,7 @@ li.current-page a {
 .x_content canvas {}
 
 footer {
-    background: #fff;
+    background: #EDEDED;
     padding: 5px 20px 0;
     height: 45px;
     margin: 0 -17px;
@@ -994,8 +994,16 @@ article.media {
     float: left;
 }
 
+h1 {
+    font-size: 28px;
+    font-weight: 400;
+}
 h2 {
-    font-size: 18px;
+    font-size: 24px;
+    font-weight: 400;
+}
+h3 {
+    font-size: 20px;
     font-weight: 400;
 }
 
