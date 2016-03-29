@@ -6476,4 +6476,8 @@ ul.errorlist { margin: 0 0 4px 13px; padding: 0; color: #E74C3C; text-align: lef
 ul.errorlist li { font-size: 14px; display: block; margin-bottom: 4px; font-weight: 700;}
 ul.errorlist li:first-child { margin-top: 0;}
 ul.errorlist li a { color: inherit; text-decoration: underline;}
+.module ul.actionlist{padding-left: 0px;}
+.module ul.actionlist li{padding-left: 5px; font-size: 14px;}
+.module ul.actionlist li i{margin-right: 5px;}
+.module ul.actionlist li span{padding-left: 20px;}
 body{font-family: segoe ui, Arial, sans-serif}
