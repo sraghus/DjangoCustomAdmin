@@ -214,17 +214,7 @@
                 </div>
                 {% endblock header %}
             <!-- END Top navigation -->
-        {% endif %}
-
-        {% block messages %}
-            {% if messages %}
-                <ul class="errorlist">
-                    {% for message in messages %}
-                        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message|capfirst }}</li>
-                    {% endfor %}
-                </ul>
-            {% endif %}
-        {% endblock messages %}
+        {% endif %}        
 
         <!-- Content -->
         <div class="{% block right_col %} right_col {% endblock %}" class="{% block coltype %}colM{% endblock %}">
@@ -239,6 +229,17 @@
                 <div class="col-md-12">
                     {% block content_title %}{% if title %}<h1>{{ title }}</h1>{% endif %}{% endblock %}
                     <div class="right_col_content col-md-9">
+
+                        {% block messages %}
+                            {% if messages %}
+                                <ul class="errorlist">
+                                    {% for message in messages %}
+                                        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message|capfirst }}</li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                        {% endblock messages %}
+                        
                         {% block content %}
                             {% block object-tools %}{% endblock %}
                             {{ content }}
