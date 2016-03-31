@@ -38,7 +38,7 @@
                                     <i class="fa fa-tasks"></i>
                                 {% endif %}
                             </div>
-                            <div class="count">{{ model.objects.all|length }}</div>
+                            <div class="count">{{ model.objects.all.count|length }}</div>
 
                             <h3>
                                 {% if model.admin_url %}

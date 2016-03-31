@@ -16,7 +16,6 @@
 <link href="{% static 'admin/css/icheck/flat/green.css' %}" rel="stylesheet" />
 {% block extrastylesheets %}{% endblock %}
 
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script src="{% static 'admin/js/bootstrap/bootstrap.min.js' %}"></script>
 <script src="{% static 'admin/js/editor/bootstrap-wysiwyg.js' %}"></script>
@@ -101,7 +100,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="menu_section">
+                            <!-- <div class="menu_section">
                                 <h3>Live On</h3>
                                 <ul class="nav side-menu">
                                     <li><a><i class="fa fa-bug"></i> Additional Pages <span class="fa fa-chevron-down"></span></a>
@@ -136,7 +135,7 @@
                                     <li><a><i class="fa fa-laptop"></i> Landing Page <span class="label label-success pull-right">Coming Soon</span></a>
                                     </li>
                                 </ul>
-                            </div>
+                            </div> -->
                         </div>
                         <!-- /sidebar menu -->
 
@@ -243,10 +242,10 @@
                         {% block content %}
                             {% block object-tools %}{% endblock %}
                             {{ content }}
-                        {% endblock %}                        
+                        {% endblock %}
                         <br class="clear" />
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                         {% block sidebar %}
 
                         {% endblock %}
@@ -259,9 +258,8 @@
                     <p class="pull-right">Bootstrap 3 template by <a>AGILIQ</a> |
                         <span class="lead"> <img src="{% static "admin/images/dj.png" %}" alt="Django Admin" > Djago Admin</span>
                     </p>
-                    <div class="clearfix"></div>    
+                    <div class="clearfix"></div>
                 </footer>
-                
             {% endblock %}
         </div>
         <!-- END Content -->
