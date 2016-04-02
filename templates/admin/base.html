@@ -217,7 +217,8 @@
         {% endif %}        
 
         <!-- Content -->
-        <div class="{% block right_col %} right_col {% endblock %}" class="{% block coltype %}colM{% endblock %}">
+        {% block right_col_content %}
+        <div class="right_col">
             {% block pretitle %}{% endblock %}
             {% block breadcrumbs %}
                 <div class="breadcrumbs">
@@ -263,6 +264,7 @@
                 </footer>
             {% endblock %}
         </div>
+        {% endblock %}
         <!-- END Content -->
     </div>
 </div>
