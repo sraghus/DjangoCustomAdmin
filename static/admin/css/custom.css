@@ -6489,7 +6489,7 @@ ul.errorlist li a { color: inherit; text-decoration: underline;}
 .module ul.actionlist li{padding-left: 5px; font-size: 14px;}
 .module ul.actionlist li i{margin-right: 5px;}
 .module ul.actionlist li span{padding-left: 20px;}
-body{font-family: segoe ui, Arial, sans-serif}
+body{font-family: segoe ui, Arial, sans-serif; font-size: 14px;}
 #changelist-filter{width: 100%; position: initial; margin-bottom: 10px;}
 .change-list .filtered .results, .change-list .filtered .paginator, .filtered #toolbar, .filtered div.xfull{margin-right: 0px;}
 .filtered .actions{margin-right: 0px;}
@@ -6519,3 +6519,42 @@ body{font-family: segoe ui, Arial, sans-serif}
     color: #777;
     height: 30px;
 }
+.form-row img, .form-row input {
+    vertical-align: middle;
+    border-radius: 6px/18px;
+    box-shadow: none;
+    background: #FFF;
+    outline: none;
+    width: 50%;
+    border: 1px solid #D0D0D0;
+    height: 30px;
+    padding: 7px 10px 10px 10px;
+}
+.submit-row{border: none; background: transparent;}
+button, html input[type=button], input[type=reset], input[type=submit]{font-size: 14px;}
+input[type=submit],#changelist .actions .button{
+    height: 30px;
+    font-size: 14px;
+    color: #FFF;
+    padding: 0 15px 0 15px;
+    background: #1A82C3;
+    border-radius: 6px/18px;
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+input[type=submit]:hover,#changelist .actions .button:hover{
+    background: #1479B8;
+    border-radius: 6px/18px;
+    color: #FFF;
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+#changelist .actions select{
+    height: 30px;
+    border-radius: 6px/18px;
+}
+ul.object-tools li{list-style-type: none;}
+ul.object-tools li a.addlink{ padding: 6px 12px; color: #FFF; font-size: 14px; border-radius: 6px/18px; background-color: #26B99A; border-color: #4cae4c;}
+ul.object-tools li a.addlink:hover{background-color: #1ABB9C; border-color: #1ABB9C; color: #FFFFFF;}
