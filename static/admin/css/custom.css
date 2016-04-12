@@ -6559,5 +6559,8 @@ input[type=submit]:hover,#changelist .actions .button:hover{
     border-radius: 6px/18px;
 }
 ul.object-tools li{list-style-type: none;}
-ul.object-tools li a.addlink{ padding: 6px 12px; color: #FFF; font-size: 14px; border-radius: 6px/18px; background-color: #26B99A; border-color: #4cae4c;}
-ul.object-tools li a.addlink:hover{background-color: #1ABB9C; border-color: #1ABB9C; color: #FFFFFF;}
+ul.object-tools li a.addlink,ul.object-tools li a.historylink{ padding: 6px 12px; color: #FFF; font-size: 14px; border-radius: 6px/18px; background: #26B99A; border-color: #4cae4c;}
+ul.object-tools li a.addlink:hover,ul.object-tools li a.historylink:hover{background: #1ABB9C; border-color: #1ABB9C; color: #FFFFFF; text-decoration: none;}
+.selector .selector-available h2,.selector-chosen h2{margin-bottom: 0px; padding: 5px;}
+.submit-row a.deletelink {display: block; background: #d9534f; border-radius: 6px/18px; padding: 0px 15px; height: 30px; line-height: 30px; font-size: 14px; color: #fff;}
+.submit-row a.deletelink:hover,.submit-row a.deletelink:focus,.submit-row a.deletelink:active{ background-color: #d43f3a; border-color: #d43f3a; color: #FFFFFF; text-decoration: none;}
