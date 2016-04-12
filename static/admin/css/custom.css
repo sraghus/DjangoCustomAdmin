@@ -214,7 +214,6 @@ body.nav-md .container.body .right_col {
 
 .right_col .right_col_content{
     min-height: 485px;
-    padding-left: 0px;
 }
 .nav_title {
     width: 230px;
@@ -6522,7 +6521,7 @@ body{font-family: segoe ui, Arial, sans-serif; font-size: 14px;}
     color: #777;
     height: 30px;
 }
-.form-row img, .form-row input {
+.form-row input[type=text],.form-row input[type=email],.form-row input[type=password] {
     vertical-align: middle;
     border-radius: 6px/18px;
     box-shadow: none;
@@ -6532,6 +6531,7 @@ body{font-family: segoe ui, Arial, sans-serif; font-size: 14px;}
     border: 1px solid #D0D0D0;
     height: 30px;
     padding: 7px 10px 10px 10px;
+    font-size: 14px;
 }
 .submit-row{border: none; background: transparent;}
 button, html input[type=button], input[type=reset], input[type=submit]{font-size: 14px;}
@@ -6558,9 +6558,13 @@ input[type=submit]:hover,#changelist .actions .button:hover{
     height: 30px;
     border-radius: 6px/18px;
 }
+
 ul.object-tools li{list-style-type: none;}
 ul.object-tools li a.addlink,ul.object-tools li a.historylink{ padding: 6px 12px; color: #FFF; font-size: 14px; border-radius: 6px/18px; background: #26B99A; border-color: #4cae4c;}
-ul.object-tools li a.addlink:hover,ul.object-tools li a.historylink:hover{background: #1ABB9C; border-color: #1ABB9C; color: #FFFFFF; text-decoration: none;}
+ul.object-tools li a.addlink:hover,ul.object-tools li a.historylink:hover{background: #1ABB9C; border-color: #1ABB9C; color: #FFFFFF; text-decoration: none; list-style-type: none;}
 .selector .selector-available h2,.selector-chosen h2{margin-bottom: 0px; padding: 5px;}
 .submit-row a.deletelink {display: block; background: #d9534f; border-radius: 6px/18px; padding: 0px 15px; height: 30px; line-height: 30px; font-size: 14px; color: #fff;}
 .submit-row a.deletelink:hover,.submit-row a.deletelink:focus,.submit-row a.deletelink:active{ background-color: #d43f3a; border-color: #d43f3a; color: #FFFFFF; text-decoration: none;}
+.cancel-link{height: 30px; line-height: 30px; font-size: 14px; color: #FFF; padding: 6px 15px; border-radius: 6px/18px; border: none; box-shadow: none; outline: none;color: #E9EDEF; background: rgba(52, 73, 94, 0.88);}
+.cancel-link:hover,.cancel-link:active,.cancel-link:focus{background-color: #394D5F; border-color: #394D5F; color: #FFFFFF; border: none; box-shadow: none; outline: none; text-decoration: none;}
+input[type=checkbox], input[type=radio]{width: 20px;}
