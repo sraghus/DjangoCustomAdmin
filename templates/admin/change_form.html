@@ -33,7 +33,7 @@
 {% endif %}
 
 {% block content %}
-    <div class="right_col_content">
+    <div class="right_col_content {% if cl.has_filters %} col-md-9 {% else %} col-md-12 {% endif %}">
         <div id="content-main" class="x_panel">
             {% block object-tools %}
                 {% if change %}
