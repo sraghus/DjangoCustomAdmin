@@ -469,6 +469,7 @@ table.no-margin .progress {
     .tile_stats_count .count {
         font-size: 35px !important;
     }
+    .selector{width: auto;}
 }
 
 @media(max-width:768px) {
@@ -478,6 +479,7 @@ table.no-margin .progress {
     .tile_stats_count .right span {
         font-size: 12px;
     }
+    .selector{width: auto;}
 }
 
 @media (min-width: 768px) {
@@ -6562,7 +6564,8 @@ input[type=submit]:hover,#changelist .actions .button:hover{
 ul.object-tools li{list-style-type: none;}
 ul.object-tools li a.addlink,ul.object-tools li a.historylink{ padding: 6px 12px; color: #FFF; font-size: 14px; border-radius: 6px/18px; background: #26B99A; border-color: #4cae4c;}
 ul.object-tools li a.addlink:hover,ul.object-tools li a.historylink:hover{background: #1ABB9C; border-color: #1ABB9C; color: #FFFFFF; text-decoration: none; list-style-type: none;}
-.selector .selector-available h2,.selector-chosen h2{margin-bottom: 0px; padding: 5px;}
+.selector .selector-available h2,.selector-chosen h2{margin-bottom: 0px; padding: 5px; font-size: 20px; line-height: 30px;}
+.selector-chosen h2{ background: #1A82C3;}
 .submit-row a.deletelink {display: block; background: #d9534f; border-radius: 6px/18px; padding: 0px 15px; height: 30px; line-height: 30px; font-size: 14px; color: #fff;}
 .submit-row a.deletelink:hover,.submit-row a.deletelink:focus,.submit-row a.deletelink:active{ background-color: #d43f3a; border-color: #d43f3a; color: #FFFFFF; text-decoration: none;}
 .cancel-link{height: 30px; line-height: 30px; font-size: 14px; color: #FFF; padding: 6px 15px; border-radius: 6px/18px; border: none; box-shadow: none; outline: none;color: #E9EDEF; background: rgba(52, 73, 94, 0.88);}
