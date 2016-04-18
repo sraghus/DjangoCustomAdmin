@@ -1,0 +1,21 @@
+{% extends "admin/base.html" %}
+{% load i18n admin_static %}
+{% block body_background %} background:#F7F7F7; {% endblock %}
+{% block header %}{% endblock %}
+{% block left-nav %} {% endblock %}
+{% block breadcrumbs %} {% endblock %}
+{% block content_title %} {% endblock %}
+{% block right_col_content %}
+
+
+    <div id="wrapper">
+        <div id="logout">
+            <section class="logout_content">
+              <h1>Logged out</h1>
+                <p>{% trans "Thanks for spending some quality time with the Web site today." %}</p>
+                <p><a href="{% url 'admin:index' %}" class="green">{% trans 'Log in again' %}</a></p>
+            </section>
+        </div>
+    </div>
+{% endblock %}
+{% block footer %}{% endblock %}
