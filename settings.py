@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'custom_admin',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -61,7 +63,7 @@ ROOT_URLCONF = 'DjangoCustomAdmin.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates', 'templates/admin'],
+        'DIRS': ['templates', 'templates/admin', 'custom_admin/templates/admin'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
