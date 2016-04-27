@@ -1,0 +1,25 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+<a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>
+&rsaquo; {% trans 'Server error' %}
+</div>
+{% endblock %}
+
+{% block title %}{% trans 'Server error (500)' %}{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="right_col_content {% if cl.has_filters %} col-lg-9 col-md-12 col-sm-12 col-xs-12 {% else %} col-lg-12 col-md-12 col-sm-12 col-xs-12 {% endif %}">
+        <div id="content-main" class="x_panel">
+			<h1>{% trans 'Server Error <em>(500)</em>' %}</h1>
+			<p>
+				{% trans "There's been an error. It's been reported to the site administrators via email and should be fixed shortly. Thanks for your patience." %}
+			</p>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
