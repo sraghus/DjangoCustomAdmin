@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'polls.apps.PollsConfig',
+    'custom_admin.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -61,7 +61,7 @@ ROOT_URLCONF = 'DjangoCustomAdmin.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates', 'templates/admin'],
+        'DIRS': ['templates', 'templates/admin', 'custom_admin/templates/admin'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
