@@ -1,0 +1,21 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+<a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>
+&rsaquo; {{ title }}
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="right_col_content {% if cl.has_filters %} col-lg-9 col-md-12 col-sm-12 col-xs-12 {% else %} col-lg-12 col-md-12 col-sm-12 col-xs-12 {% endif %}">
+        <div id="content-main" class="x_panel">
+			<p>
+				{% trans "Something's wrong with your database installation. Make sure the appropriate database tables have been created, and make sure the database is readable by the appropriate user." %}
+			</p>
+		</div>
+	</div>
+</div>
+{% endblock %}
