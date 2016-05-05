@@ -6484,7 +6484,7 @@ ul.notifications {
     padding: 8px 0;
 }
 .errornote { font-size: 14px; font-weight: 700; display: block; padding: 10px 12px; margin: 0 0 10px 0; color: #E74C3C; background-position: 5px 12px;}
-ul.errorlist { margin: 0 0 4px 13px; padding: 0; color: #E74C3C; text-align: left;}
+ul.errorlist { margin-bottom: 10px; padding: 0; color: #E74C3C; text-align: left; background: #FFF; padding-left: 10px; line-height: 35px; border-radius: 4px;}
 ul.errorlist li { font-size: 14px; display: block; margin-bottom: 10px; font-weight: 700;}
 ul.errorlist li:first-child { margin-top: 0;}
 ul.errorlist li.success{color: #4cae4c;}
@@ -6574,7 +6574,7 @@ input[type=checkbox], input[type=radio]{width: 20px;}
 div#content-main{min-height: 430px;}
 table#change-history{width: 100%;}
 table#change-history th{font-size: 15px; line-height: 30px;}
-#changelist table thead th{text-align: center; padding: 5px;}
+#changelist table thead th{white-space: normal; vertical-align: bottom; text-align: left; padding: 5px; }
 .change-list .filtered table,table#result_list {border-right: 1px solid #C8C8C8}
 thead th, tfoot td,#changelist .paginator{border: 1px solid #ccc;vertical-align: middle; background: #F1F1F1; box-shadow: 5px -15px 15px -10px rgba(0, 0, 0, 0.15) inset; cursor: pointer; color: #333;}
 #changelist table tbody td:first-child, #changelist table tbody th:first-child{border-right: 1px solid #ccc}
