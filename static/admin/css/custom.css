@@ -5993,7 +5993,7 @@ section.logout_content:after{
     border-top: 1px solid #CFD5D9;
     padding: 15px 0;
 }
-.login_content form input[type="submit"],#content form .submit{margin-bottom: 50px;}
+.login_content form input[type="submit"],#content form .submit{margin-bottom: 50px;box-shadow: 5px -15px 15px -10px rgba(0, 0, 0, 0.15) inset; height: 35px;}
 .button a {
     background: url(http://cssdeck.com/uploads/media/items/8/8bcLQqF.png) 0 -112px no-repeat;
     color: #7E7E7E;
@@ -6574,3 +6574,11 @@ input[type=checkbox], input[type=radio]{width: 20px;}
 div#content-main{min-height: 430px;}
 table#change-history{width: 100%;}
 table#change-history th{font-size: 15px; line-height: 30px;}
+#changelist table thead th{text-align: center; padding: 5px;}
+.change-list .filtered table,table#result_list {border-right: 1px solid #C8C8C8}
+thead th, tfoot td,#changelist .paginator{border: 1px solid #ccc;vertical-align: middle; background: #F1F1F1; box-shadow: 5px -15px 15px -10px rgba(0, 0, 0, 0.15) inset; cursor: pointer; color: #333;}
+#changelist table tbody td:first-child, #changelist table tbody th:first-child{border-right: 1px solid #ccc}
+#changelist table tbody td, #changelist table tbody th{border-left: 1px solid #ccc}
+td, th {border-bottom: 1px solid #eee; vertical-align: top; padding: 3px;}
+.row1 {background: #DADADA;}
+.paginator{padding: 10px;}
